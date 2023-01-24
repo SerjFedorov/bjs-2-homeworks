@@ -14,5 +14,20 @@ function solveEquation(a, b, c) {
 }
 
 function calculateTotalMortgage(percent, contribution, amount, countMonths) {
+                    //процентная ставка, первый взнос, сумма кредита, срок кредита //
+  if (isNaN(percent)){
+      return false;
+  }
+  if (isNaN(contribution)){
+    return false;
+  }
+  if (isNaN(amount)){
+    return false;
+  }
+  let percentM = percent/12/100;
+  let bodyCredit = amount - contribution;
+  let payMounth = bodyCredit * (percentM + (percentM/(((1+percentM)** countMonths)-1)));
+  let totalPay = payMounth * countMonths;
+  return Number (totalPay.toFixed(2));
   
 }
