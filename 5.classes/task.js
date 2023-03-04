@@ -87,6 +87,12 @@ class Library {
         }
         return this.books.splice(indexBook,1)[0];
     }
+    // giveBookByName(bookName) {
+    //     const book = this.findBookBy("name", bookName);
+    //     if (!book) return null;
+    //     this.books = this.books.filter((item) => item.name !== bookName);
+    //     return book;
+    //     }
 }
 
 class Student {
