@@ -1,6 +1,8 @@
 ﻿function parseCount (parseNumber){
     let result = Number.parseFloat(parseNumber);
-        if (Number.isNaN(result)) throw new Error('Невалидное значение');
+        if (Number.isNaN(result)) {
+            throw new Error('Невалидное значение');
+        }
         return result;  
 }
 
@@ -11,7 +13,7 @@ function validateCount (b) {
     catch(err) {
         return err
     }  
-};
+}
 
 class Triangle {
     constructor (a,b,c) {
@@ -35,7 +37,7 @@ class Triangle {
 
 function getTriangle (a,b,c) {
     try {
-    return new Triangle(a,b,c)
+        return new Triangle(a,b,c)
     } catch (error) {
         return {
         get area () {
@@ -44,7 +46,7 @@ function getTriangle (a,b,c) {
         get perimeter () {
         return 'Ошибка! Треугольник не существует'
         }
-    }
+        }
     }
 }
 
